@@ -5,8 +5,6 @@ const classNames = {
 	TODO_DELETE: 'todo-delete'	
 }
 
-const ANIMATE = true
-
 const list = document.getElementById('todo-list')
 const itemCountSpan = document.getElementById('item-count')
 const uncheckedCountSpan = document.getElementById('unchecked-count')
@@ -133,10 +131,7 @@ function addTaskToUI(task){
 		appendChild(button)
 	}
 
-	document.getElementById('todo-list').appendChild(listItem)
-
-	checkbox.addEventListener('change', (e)=>{ 
-		updateStatus()
-	})
+	list.appendChild(listItem)
+	checkbox.addEventListener('change', (e)=>{ updateStatus() })
 }
 

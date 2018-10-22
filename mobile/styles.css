@@ -69,6 +69,11 @@ ul {
   float: right;
 }
 
+input[type=checkbox]:checked + span{
+  color: gray;
+  text-decoration: line-through;
+}
+
 .highlight{    
     background-color: #eee;
     transition: all 0 1s ease-in;  
