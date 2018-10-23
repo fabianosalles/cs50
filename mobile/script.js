@@ -64,11 +64,8 @@ let todo = new TodoList({
 
 function newTodo() {  
 	let taskName = prompt('Input the task name', 'New Task')
-	if (!taskName)
-		alert('The task name is required')
-	else{
+	if (taskName)
 		todo.add(taskName)
-	}
 }
 
 function addToUI(task){		
@@ -119,7 +116,6 @@ function addTaskToUI(task){
 	with (button){
 		innerText = 'Delete'
 		addEventListener('click', (e) =>{
-			debugger
 			todo.remove(e.target.parentElement.dataset.taskId)
 		})
 	}
